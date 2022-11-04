@@ -62,23 +62,24 @@ const user = {
 console.log(user);
 console.log(typeof user);
 
-// atividade 
+// atividade ==================================================================
 
-// const num1 = new FormData(document.querySelector('form'));
-// const inputValue1 = num1.get("num1");
+const num1 = new FormData(document.querySelector('form'));
+const inputValue1 = num1.get("num1");
 
-// const num2 = new FormData(document.querySelector('form'));
-// const inputValue2 = num2.get("num2");
+const num2 = new FormData(document.querySelector('form'));
+const inputValue2 = num2.get("num2");
 
-// const soma = num1 + num2;
-// console.log(soma);
-// const subtracao = num1 - num2;
-// console.log(subtracao);
-// const multiplicacao = num1 * num2;
-// console.log(multiplicacao);
-// const divisao = num1 / num2;
-// console.log(divisao);
- 
+const soma = num1 + num2;
+console.log(soma);
+const subtracao = num1 - num2;
+console.log(subtracao);
+const multiplicacao = num1 * num2;
+console.log(multiplicacao);
+const divisao = num1 / num2;
+console.log(divisao);
+
+//  ===========================================================================
 
 // métodos de Strings
 const text = "qualquer um";
