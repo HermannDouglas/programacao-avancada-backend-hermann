@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title defer>Document</title>
     <script>
-        const formData = new FormData(document.querySelector('form'))
+        const formData = new FormData(document.querySelector('form'));
 
-        const inputValue = formData.get("name")
+        const inputValue = formData.get("name");
 
-        console.log(inputValue)
+        console.log(inputValue);
     </script>
 </head>
 <body>
-    <form action="#" method="post">
+    <form  method="post">
         <label for="name">Nome:</label>
         <input type="text">
         <br>
         <button type="submit">OK</button>
     </form>
+    <br>
+    <a href="first-week/index.html">Index</a>
 </body>
 </html>
