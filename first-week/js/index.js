@@ -105,19 +105,19 @@ console.log(inputValue2);
 const valueConv1 = Number(inputValue1);
 const valueConv2 = Number(inputValue2);
 const soma = valueConv1 + valueConv2;
-console.log(soma);
-console.log(typeof soma);
+// console.log(soma);
+// console.log(typeof soma);
 
 const subtracao = inputValue1 - inputValue2;
-console.log(subtracao);
-console.log(typeof subtracao);
+// console.log(subtracao);
+// console.log(typeof subtracao);
 
 const multiplicacao = inputValue1 * inputValue2;
-console.log(multiplicacao);
-console.log(typeof multiplicacao);
+// console.log(multiplicacao);
+// console.log(typeof multiplicacao);
 
 const divisao = inputValue1 / inputValue2;
-console.log(divisao);
-console.log(typeof divisao);
+// console.log(divisao);
+// console.log(typeof divisao);
     
 //  ===========================================================================
