@@ -241,8 +241,8 @@ function myFunction() {
 }
 console.log(myFunction());    
 
-function myfunction2(name, surame){
-    return `O nome completo é ${name} ${surame}.`;
+function myfunction2(name, surname){
+    return `O nome completo é ${name} ${surname}.`;
 }
 
 console.log(myfunction2('Peter', 'Parker'));
