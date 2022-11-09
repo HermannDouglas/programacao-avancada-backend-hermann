@@ -307,7 +307,7 @@ const tenis = new Tenis('tenis Nike Jordan', 12000.00, '42');
 console.log(tenis.showNumber());
 console.log(tenis.productDetails());
 
-// DOM - 
+// DOM - Document Object Model
 console.log(document.getElementById('titulo'));
 // console.log(document.getElementsByClassName('text'));
 const texts = document.querySelectorAll('.text');
