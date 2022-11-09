@@ -253,5 +253,75 @@ const myArrowFunction = (a, b) => a + b;
 console.log(myArrowFunction(5, 16));
 
 const resultado = (x) => () => (x+5);
-console.log(resultado(7)()
-);
+console.log(resultado(7)());
+
+// const namesLength = names.map( (value) =>  value.length);
+const namesLength = names.map( ({length}) =>  length);
+
+console.log(namesLength);
+
+// Orientação a objeto
+class Product{
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    productDetails() {
+        return `O nome do produto é ${this.name} e o preço é ${this.price}.`;
+    }
+
+    static test() {
+        console.log('Testando método estático...');
+    }
+
+}
+
+// Herança
+class Tenis extends Product{
+    constructor(name, price, size) {
+        super(name, price);
+        this.size = size;
+    }
+
+    showNumber() {
+        return `O tamanho do ${this.name} é ${this.size}.`;
+    }
+
+    productDetails() {
+        return `O nome do produto é ${this.name}, o tamanho é ${this.size} e o preço é ${this.price}.`;
+    }
+
+}
+
+// Instanciando um objeto product
+const shirt = new Product('Camisa branca', 19.99);
+console.log(shirt.productDetails());
+
+const sock = new Product('Meia cinza', 2.49);
+console.log(sock.productDetails());
+
+Product.test();
+
+const tenis = new Tenis('tenis Nike Jordan', 12000.00, '42');
+console.log(tenis.showNumber());
+console.log(tenis.productDetails());
+
+// DOM - 
+console.log(document.getElementById('titulo'));
+// console.log(document.getElementsByClassName('text'));
+const texts = document.querySelectorAll('.text');
+console.log(texts);
+
+texts.forEach((data) => console.log(data));
+
+texts[0].textContent = 'Estou alterando o primeiro parágrafo.';
+
+texts[0].innerHTML = '<span>Testando alteração...</span>';
+
+texts[1].style.backgroundColor = 'red';
+
+texts[2].remove();
+
+const button = document.querySelector('#btn');
+button.addEventListener('click', () => (texts[3].style.backgroundColor='orange'));
