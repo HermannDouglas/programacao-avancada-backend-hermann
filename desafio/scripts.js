@@ -11,7 +11,7 @@ fetch('http://jsonplaceholder.typicode.com/users')
     .then((dado) => (dado.forEach(item => {
         // console.log(`Nome: ${item.name} E-mail: ${item.email}`)
 
-        const ul = document.querySelector('#text')
+        const ul = document.querySelector('.text')
         console.log(ul)
 
         const li = document.createElement('li')
