@@ -9,7 +9,28 @@ fetch('http://jsonplaceholder.typicode.com/users')
     .then(T => T.json())
     // .then(console.log)
     .then((dado) => (dado.forEach(item => {
-        console.log(`Nome: ${item.name} E-mail: ${item.email}`)
-    })))
+        // console.log(`Nome: ${item.name} E-mail: ${item.email}`)
+
+        const ul = document.querySelector('#text')
+        console.log(ul)
+
+        const li = document.createElement('li')
+        li.textContent = `Nome: ${item.name} E-mail: ${item.email}`
+        ul.appendChild(li)
+        console.log(ul)
+
+    })));
     
-document.querySelector('n')
+
+    // fetch('http://jsonplaceholder.typicode.com/users')
+    // .then(T => T.json())
+    // .then((dado)=> (dado.forEach(item => {
+    //     const ul = document.querySelector('#text')
+    //     console.log(ul)
+
+    //     const li = document.createElement('li')
+    //     li.textContent = `nome: ${item['name']} e-mail: ${item.email}`
+    //     ul.appendChild(li)
+    //     console.log(ul)
+
+    // })))
