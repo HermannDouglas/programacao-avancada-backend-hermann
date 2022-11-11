@@ -12,25 +12,12 @@ fetch('http://jsonplaceholder.typicode.com/users')
         // console.log(`Nome: ${item.name} E-mail: ${item.email}`)
 
         const ul = document.querySelector('.text')
-        console.log(ul)
+        // console.log(ul)
 
         const li = document.createElement('li')
         li.textContent = `Nome: ${item.name} E-mail: ${item.email}`
         ul.appendChild(li)
-        console.log(ul)
+        console.log(li)
 
     })));
     
-
-    // fetch('http://jsonplaceholder.typicode.com/users')
-    // .then(T => T.json())
-    // .then((dado)=> (dado.forEach(item => {
-    //     const ul = document.querySelector('#text')
-    //     console.log(ul)
-
-    //     const li = document.createElement('li')
-    //     li.textContent = `nome: ${item['name']} e-mail: ${item.email}`
-    //     ul.appendChild(li)
-    //     console.log(ul)
-
-    // })))
