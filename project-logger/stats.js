@@ -18,7 +18,8 @@ setInterval( () => {
     console.clear();
     console.log('+++++++ MEMORY STATS +++++++');
     console.table(stats);
-
+    
+    // Enviando os dados da variavel stats para um JSON
     log('Rodando...', JSON.stringify(stats));
 
 }, 1000);
