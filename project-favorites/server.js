@@ -7,15 +7,24 @@ http.createServer((req, res) => {
     // res.end();
     // res.end(console.log(req));
     // Definindo rotas para a aplicação
-    if (req.url === '/') {
-        fs.readFile(
-            path.join(__dirname, 'public','index.html'),
-            (err, content) => {
-                if (err) throw err 
-                    res.end(content)
-            }
-        )
-    }
+    const file =  req.url === '/' ? 'index.html' : req.url;
+    const filePath = path.join(__dirname, 'public', file);
+    const extname = path.extname(filePath);
+
+    const allowedFileTypes = ['.html', '.js', '.css'];
+    const allowed = allowedFileTypes.find(
+        (item) => item === extname
+    )
+    
+    if (!allowed) return;
+    
+    fs.readFile(
+        filePath,
+        (err, content) => {
+            if (err) throw err 
+                res.end(content)
+        }
+    );
     // if (req.url === '/contato') {
     //     res.end('<h1>Contato</h1>');
     // }
