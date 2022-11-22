@@ -92,7 +92,7 @@
 // chars.unshift('VV');
 // console.log(chars);
 
-// // atividade ==================================================================
+// //  Desafio 01 ==================================================================
 
 // // const num1 = new FormData(document.querySelector('form'));
 // // const inputValue1 = num1.get("num1");
@@ -252,6 +252,7 @@ console.log(myfunction2('Peter', 'Parker'));
 const myArrowFunction = (a, b) => a + b;    
 console.log(myArrowFunction(5, 16));
 
+// Desafio: Transforme a função a seguir em uma arrow function. ======================
 const resultado = (x) => () => (x+5);
 console.log(resultado(7)());
 
