@@ -1,32 +1,34 @@
-const http = require('http');
-const path = require('path');
-const fs = require('fs');
+const http = require('http')
+const path = require('path')
+const fs = require('fs')
 
-http.createServer((req, res) => {
-    // res.write('<h1>Olá!</h1>');
-    // res.end();
-    // res.end(console.log(req));
-    // Definindo rotas para a aplicação
-    const file =  req.url === '/' ? 'index.html' : req.url;
-    const filePath = path.join(__dirname, 'public', file);
-    const extname = path.extname(filePath);
+http.createServer((req, res)=>{
+    
+    // as rotas da aplicação foram definidas de maneira dinâmica
+    const file = req.url === '/' ? 'index.html' : req.url
+    const filePath = path.join(__dirname,'public',file)
+    
+    // pegando a extensão do arquivo
+    const extname = path.extname(filePath)
 
-    const allowedFileTypes = ['.html', '.js', '.css'];
+    // criando um vetor com as extensões esperadas
+    const allowedFileTypes = ['.html', '.js', '.css']
+
+    // varrendo o vetor de extensões permitidas para tentar encontrar algum arquivo com extensão diferente das esperadas 
     const allowed = allowedFileTypes.find(
-        (item) => item === extname
+        (item) => item === extname 
     )
-    
-    if (!allowed) return;
-    
+
+    // se encontrou uma extensão não esperada, retorna, somente para não travar a aplicação
+    if(!allowed) return
+
+
     fs.readFile(
         filePath,
         (err, content) => {
-            if (err) throw err 
-                res.end(content)
+            if (err) throw err
+            res.end(content)
         }
-    );
-    // if (req.url === '/contato') {
-    //     res.end('<h1>Contato</h1>');
-    // }
-    
-}).listen(5000, () => (console.log('Servidor rodando...')));
+    )
+
+}).listen(5000, () => (console.log('Servidor rodando...')))
